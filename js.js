@@ -5,9 +5,7 @@ function positionMessage() {
   elem.style.position = "absolute";
   elem.style.left = "0px";
   elem.style.top = "0px";
-  moveElement('message',200,200,50);
+  moveElement('message',5);
 }
 
 addLoadEvent(positionMessage);
-
-
