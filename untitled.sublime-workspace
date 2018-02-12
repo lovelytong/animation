@@ -4,6 +4,50 @@
 		"selected_items":
 		[
 			[
+				"y",
+				"ypos"
+			],
+			[
+				"f",
+				"final_y"
+			],
+			[
+				"xpo",
+				"xpos"
+			],
+			[
+				"xp",
+				"xpos"
+			],
+			[
+				"x",
+				"xpos"
+			],
+			[
+				"fi",
+				"final_x"
+			],
+			[
+				"re",
+				"return"
+			],
+			[
+				"mo",
+				"moveElement"
+			],
+			[
+				"ele",
+				"elementID"
+			],
+			[
+				"let",
+				"left"
+			],
+			[
+				"move",
+				"moveMessage"
+			],
+			[
 				"va",
 				"variable"
 			],
@@ -86,10 +130,6 @@
 			[
 				"ta",
 				"table\tTag"
-			],
-			[
-				"f",
-				"font-family"
 			],
 			[
 				"v",
@@ -260,6 +300,10 @@
 	},
 	"file_history":
 	[
+		"/Users/tongyu/Desktop/dom-js-practice/js动画2/untitled.html",
+		"/Users/tongyu/Desktop/dom-js-practice/js动画2/js.js",
+		"/Users/tongyu/Desktop/dom-js-practice/js动画2/moveElement.js",
+		"/Users/tongyu/Desktop/dom-js-practice/js动画2/addLoadEvent.js",
 		"/Users/tongyu/Desktop/dom-js-practice/js动画/js.js",
 		"/Users/tongyu/Desktop/js.js",
 		"/Users/tongyu/Desktop/untitled.html",
@@ -393,12 +437,12 @@
 	},
 	"select_project":
 	{
-		"height": 0.0,
+		"height": 500.0,
 		"last_filter": "",
 		"selected_items":
 		[
 		],
-		"width": 0.0
+		"width": 380.0
 	},
 	"select_symbol":
 	{
