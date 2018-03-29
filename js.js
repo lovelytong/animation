@@ -15,9 +15,10 @@ function positionMessage() {
   elem3.style.position = "absolute";
   elem3.style.left = "150px";
   elem3.style.top = "0px";
-  father.style.position = "absolute";
-  father.style.left = "30px";
-  father.style.top = "30px";
+  father.style.position = "relative";
+  father.style.margin = "auto";
+  father.style.top = "60px";
+
   moveElement('father','message', 30, 1, 1);
   moveElement('father','message2',50, -1, 1);
   moveElement('father','message3',20, 1, 1);
