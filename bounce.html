@@ -1,26 +1,27 @@
 <!DOCTYPE html>
 <html>
 <head>
-<meta charset="utf-8">
-<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-<title>Examples</title>
-<meta name="description" content="">
-<meta name="keywords" content="">
-<link href="" rel="stylesheet">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Examples</title>
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+    <link rel="stylesheet" href="wave.css">
 </head>
-<body>
-  <div id="father" style="background-color: grey;position: absolute;height: 500px;width: 600px;border:1px red solid;">
-    <div id="message" style="width: 50px;height: 50px;">
-      <img src="ball.png" alt="" width="50px" height="50px">
+<body style="min-width: 1903px;min-height: 947px;">
+<div  id="father" style="position: absolute;height: 940px;width: 1920px;">
+    <div id="ball" style="width: 150px;height: 150px; overflow: hidden;">
+        <img src="ball.png" alt="" width="150px" height="150px" style="margin: auto;">
     </div>
-    <div id="message2" style="width: 50px;height: 50px;">
-      <img src="ball.png" alt="" width="50px" height="50px">
+</div>
+<div class="waveWrapper waveAnimation">
+    <div class="waveWrapperInner bgMiddle">
+        <div class="wave waveMiddle"></div>
     </div>
-    <div id="message3" style="width: 50px;height: 50px;">
-      <img src="ball.png" alt="" width="50px" height="50px">
+    <div class="waveWrapperInner bgBottom">
+        <div class="wave waveBottom"></div>
     </div>
-  </div>
-  <script src="addLoadEvent.js"></script>
-  <script src="bounce.js"></script>
+</div>
+<script src="bounce.js"></script>
 </body>
 </html>

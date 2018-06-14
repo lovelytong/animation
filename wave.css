@@ -1,0 +1,83 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background: #03a8b7;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    z-index: 3;
+}
+
+.waveWrapper {
+    overflow: hidden;
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    top: 0;
+    margin: auto;
+}
+ 
+
+.waveWrapperInner {
+    position: absolute;
+    width: 100%;
+    overflow: hidden;
+    height: 100%;
+    bottom: -10px;
+}
+
+.bgMiddle {
+    z-index: 0;
+    opacity: 0.6;
+}
+
+.bgBottom {
+    z-index: 1;
+    opacity: 0.9;
+}
+
+.wave {
+    position: absolute;
+    left: 0;
+    width: 200%;
+    height: 100%;
+    background-repeat: repeat no-repeat;
+    background-position: 0 bottom;
+    transform-origin: center bottom;
+}
+
+.waveMiddle {
+    background-size: 50% 260px;
+    background-image: url(wave-mid.png);
+}
+
+.waveAnimation .waveMiddle {
+    animation: move_wave 5s linear infinite;
+}
+
+.waveBottom {
+    background-size: 50% 220px;
+    background-image: url(wave-bot.png);
+}
+
+.waveAnimation .waveBottom {
+    animation: move_wave 10s linear infinite;
+}
+
+@keyframes move_wave {
+    0% {
+        transform: translateX(0) translateZ(0) scaleY(1)
+    }
+    50% {
+        transform: translateX(-25%) translateZ(0) scaleY(1)
+    }
+    100% {
+        transform: translateX(-50%) translateZ(0) scaleY(1)
+    }
+}

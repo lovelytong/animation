@@ -1,65 +1,56 @@
-
 function positionMessage() {
-  if(!document.getElementById) return false;
-  if(!document.getElementById('message')) return false;
-  var elem = document.getElementById('message');
-  var elem2 = document.getElementById('message2');
-  var elem3 = document.getElementById('message3');
-  var father = document.getElementById('father');
-  elem.style.position = "absolute";
-  elem.style.left = "0px";
-  elem.style.top = "0px";
-  elem2.style.position = "absolute";
-  elem2.style.left = "50px";
-  elem2.style.top = "0px";
-  elem3.style.position = "absolute";
-  elem3.style.left = "150px";
-  elem3.style.top = "0px";
-  father.style.position = "relative";
-  father.style.margin = "auto";
-  father.style.top = "60px";
+    if (!document.getElementById) return false;
+    if (!document.getElementById('ball')) return false;
+    if (!document.getElementById('father')) return false;
+    var ball = document.getElementById('ball');
+    var father = document.getElementById('father');
+    ball.style.position = "absolute";
+    ball.style.left = "0px";
+    ball.style.top = "0px";
+    ball.style.margin = "0px";
+    father.style.position = "relative";
 
-  moveElement('father','message', 30, 1, 1);
-  moveElement('father','message2',50, -1, 1);
-  moveElement('father','message3',20, 1, 1);
+    ballMove(father, ball, 10, 1, 1);
 }
 
 
-function moveElement(fatherID, elementID, interval, xdirection, ydirection) {
-  if(!document.getElementById) return false;
-  if(!document.getElementById(elementID)) return false;
-  var elem = document.getElementById(elementID);
-  var father = document.getElementById(fatherID);
-  var xpos = parseInt(elem.style.left);
-  var ypos = parseInt(elem.style.top);
-  //设置移动速度
-  var xspeed = 5, yspeed = 9
+function ballMove(father, ball, interval, xdirection, ydirection) {
 
-  xpos += (xspeed * xdirection)
-  ypos += (yspeed * ydirection)
 
-  if(xpos > parseInt(father.style.width) - parseInt(elem.style.width) - 1){
-    xdirection *= -1;
-  }
+    // 获取小球坐标
+    var xpos = parseInt(ball.style.left);
+    var ypos = parseInt(ball.style.top);
 
-  if(xpos < 1){
-    xdirection *= -1;
-  }
+    //设置移动速度，x为横向移动速度，y为纵向移动速度
+    var xspeed = 3, yspeed = 2
 
-  if(ypos > parseInt(father.style.height) - parseInt(elem.style.height) - 1){
-    ydirection *= -1;
-  }
+    // 计算小球按照指定的方向移动距离
+    xpos += (xspeed * xdirection)
+    ypos += (yspeed * ydirection)
 
-  if(ypos < 1){
-    ydirection *= -1;
-  }
+    // 如果碰到容器边缘，则改变方向
+    if (xpos > parseInt(father.style.width) - parseInt(ball.style.width)) {
+        xdirection *= -1;
+    }
 
-  elem.style.left = xpos + "px";
-  elem.style.top = ypos + "px";
-  var repeat = "moveElement('"+fatherID+"','"+elementID+"',"+interval+","+xdirection+","+ydirection+")";
+    if (xpos < 0) {
+        xdirection *= -1;
+    }
 
-  movement = setTimeout(repeat,interval);
+    if (ypos > parseInt(father.style.height) - parseInt(ball.style.height)) {
+        ydirection *= -1;
+    }
+
+    if (ypos < 0) {
+        ydirection *= -1;
+    }
+
+    // 重新给小球设置定位
+    ball.style.left = xpos + "px";
+    ball.style.top = ypos + "px";
+
+
+    setTimeout(() => ballMove(father, ball, interval, xdirection, ydirection), interval);
 }
 
-addLoadEvent(positionMessage);
-
+window.onload = positionMessage;
