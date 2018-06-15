@@ -81,3 +81,10 @@ body {
         transform: translateX(-50%) translateZ(0) scaleY(1)
     }
 }
+
+input {
+    position: relative;
+    z-index: 5;
+    margin-left: 20px;
+}
+

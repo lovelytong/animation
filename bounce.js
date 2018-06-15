@@ -22,26 +22,27 @@ function ballMove(father, ball, interval, xdirection, ydirection) {
     var ypos = parseInt(ball.style.top);
 
     //设置移动速度，x为横向移动速度，y为纵向移动速度
-    var xspeed = 3, yspeed = 2
+    var xspeed = document.getElementById('xspeed').value;
+    var yspeed = document.getElementById('yspeed').value;
 
     // 计算小球按照指定的方向移动距离
     xpos += (xspeed * xdirection)
     ypos += (yspeed * ydirection)
 
     // 如果碰到容器边缘，则改变方向
-    if (xpos > parseInt(father.style.width) - parseInt(ball.style.width)) {
+    if (xpos > parseInt(father.style.width) - parseInt(ball.style.width) + 30) {
         xdirection *= -1;
     }
 
-    if (xpos < 0) {
+    if (xpos < -35) {
         xdirection *= -1;
     }
 
-    if (ypos > parseInt(father.style.height) - parseInt(ball.style.height)) {
+    if (ypos > parseInt(father.style.height) - parseInt(ball.style.height) + 30) {
         ydirection *= -1;
     }
 
-    if (ypos < 0) {
+    if (ypos < -35) {
         ydirection *= -1;
     }
 
